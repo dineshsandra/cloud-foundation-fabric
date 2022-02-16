@@ -75,8 +75,8 @@ locals {
   }
   service_accounts = merge(
     {
-      gke-multitenant-dev  = module.branch-gke-multitenant-dev-sa.iam_email
-      gke-multitenant-prod = module.branch-gke-multitenant-prod-sa.iam_email
+      gke-multitenant-dev  = module.branch-gke-multitenant-dev-sa.email
+      gke-multitenant-prod = module.branch-gke-multitenant-prod-sa.email
       networking           = module.branch-network-sa.email
       project-factory-dev  = module.branch-teams-dev-projectfactory-sa.email
       project-factory-prod = module.branch-teams-prod-projectfactory-sa.email

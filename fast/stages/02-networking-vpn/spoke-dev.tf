@@ -105,7 +105,7 @@ resource "google_project_iam_binding" "dev_spoke_project_iam_delegated" {
   role    = "roles/resourcemanager.projectIamAdmin"
   members = [
     local.service_accounts.project-factory-dev,
-    local.service_accounts.gke_multitenant_sa,
+    local.service_accounts.gke-multitenant-dev,
   ]
   condition {
     title       = "dev_stage3_sa_delegated_grants"
